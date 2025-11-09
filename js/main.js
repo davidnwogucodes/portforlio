@@ -26,6 +26,13 @@ about.addEventListener('click', () => {
       this.setBackground('#777')
     }
   })
+  
+  // Auto-expand on mobile after modal opens
+  if (isMobile) {
+    setTimeout(() => {
+      aboutBox.fullscreen()
+    }, 300)
+  }
 })
 
 contact.addEventListener('click', () => {
@@ -46,6 +53,13 @@ contact.addEventListener('click', () => {
       this.setBackground('#777')
     }
   })
+  
+  // Auto-expand on mobile after modal opens
+  if (isMobile) {
+    setTimeout(() => {
+      contactBox.fullscreen()
+    }, 300)
+  }
 })
 
 projects.addEventListener('click', () => {
@@ -66,6 +80,13 @@ projects.addEventListener('click', () => {
       this.setBackground('#777')
     }
   })
+  
+  // Auto-expand on mobile after modal opens
+  if (isMobile) {
+    setTimeout(() => {
+      projectsBox.fullscreen()
+    }, 300)
+  }
 })
 
 
