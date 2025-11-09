@@ -111,7 +111,8 @@ nav ul li {
 }
 
 #about-content,
-#contact-content {
+#contact-content,
+#projects-content {
   max-width: 100%;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -119,7 +120,8 @@ nav ul li {
 }
 
 #about-content p,
-#contact-content p {
+#contact-content p,
+#projects-content p {
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal;
@@ -127,7 +129,30 @@ nav ul li {
 }
 
 #about-content h2,
-#contact-content h2 {
+#contact-content h2,
+#projects-content h2 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+#about-content h3,
+#contact-content h3,
+#projects-content h3 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+#about-content ul,
+#contact-content ul,
+#projects-content ul {
+  max-width: 100%;
+}
+
+#about-content li,
+#contact-content li,
+#projects-content li {
   word-wrap: break-word;
   overflow-wrap: break-word;
   max-width: 100%;
@@ -309,6 +334,24 @@ footer {
     max-width: 100% !important;
   }
 
+  .wb-body h3 {
+    font-size: 14px !important;
+    margin-bottom: 8px !important;
+    margin-top: 15px !important;
+    max-width: 100% !important;
+  }
+
+  .wb-body ul {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+  }
+
+  .wb-body li {
+    font-size: 11px !important;
+    margin-bottom: 8px !important;
+    max-width: 100% !important;
+  }
+
   .wb-body * {
     max-width: 100% !important;
     word-wrap: break-word !important;
@@ -377,5 +420,16 @@ footer {
 
   .wb-body h2 {
     font-size: 14px !important;
+  }
+
+  .wb-body h3 {
+    font-size: 12px !important;
+    margin-bottom: 6px !important;
+    margin-top: 12px !important;
+  }
+
+  .wb-body li {
+    font-size: 10px !important;
+    margin-bottom: 6px !important;
   }
 }
