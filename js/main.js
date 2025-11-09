@@ -1,25 +1,30 @@
 const about = document.querySelector('#about')
 const contact = document.querySelector('#contact')
+const projects = document.querySelector('#projects')
 const aboutContent = document.querySelector('#about-content')
 const contactContent = document.querySelector('#contact-content')
+const projectsContent = document.querySelector('#projects-content')
+
+// Check if mobile
+const isMobile = window.innerWidth <= 768
 
 about.addEventListener('click', () => {
   const aboutBox = new WinBox({
     title: 'About Me',
     //modal: true,
-    width: '400px',
-    height: '400px',
-    top: 50,
-    right: 50,
-    bottom: 50,
-    left: 50,
-    mount: aboutContent,
+    width: isMobile ? '90%' : '400px',
+    height: isMobile ? '80%' : '400px',
+    top: isMobile ? '5%' : 50,
+    right: isMobile ? '5%' : 50,
+    bottom: isMobile ? 'auto' : 50,
+    left: isMobile ? '5%' : 50,
+    html: aboutContent.innerHTML,
     onfocus: function () {
       this.setBackground('#00aa00')
     },
     onblur: function () {
       this.setBackground('#777')
-    },
+    }
   })
 })
 
@@ -27,19 +32,39 @@ contact.addEventListener('click', () => {
   const contactBox = new WinBox({
     title: 'Contact Me',
     background: '#00aa00',
-    width: '400px',
-    height: '400px',
-    top: 150,
-    right: 50,
-    bottom: 50,
-    left: 250,
-    mount: contactContent,
+    width: isMobile ? '90%' : '400px',
+    height: isMobile ? '80%' : '400px',
+    top: isMobile ? '5%' : 150,
+    right: isMobile ? '5%' : 50,
+    bottom: isMobile ? 'auto' : 50,
+    left: isMobile ? '5%' : 250,
+    html: contactContent.innerHTML,
     onfocus: function () {
       this.setBackground('#00aa00')
     },
     onblur: function () {
       this.setBackground('#777')
+    }
+  })
+})
+
+projects.addEventListener('click', () => {
+  const projectsBox = new WinBox({
+    title: 'Projects',
+    background: '#00aa00',
+    width: isMobile ? '90%' : '500px',
+    height: isMobile ? '80%' : '500px',
+    top: isMobile ? '5%' : 100,
+    right: isMobile ? '5%' : 100,
+    bottom: isMobile ? 'auto' : 50,
+    left: isMobile ? '5%' : 150,
+    html: projectsContent.innerHTML,
+    onfocus: function () {
+      this.setBackground('#00aa00')
     },
+    onblur: function () {
+      this.setBackground('#777')
+    }
   })
 })
 
