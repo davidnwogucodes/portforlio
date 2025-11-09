@@ -24,6 +24,12 @@ about.addEventListener('click', () => {
     },
     onblur: function () {
       this.setBackground('#777')
+    },
+    onrestore: function() {
+      if (isMobile) {
+        this.close()
+        return false
+      }
     }
   })
   
@@ -33,6 +39,19 @@ about.addEventListener('click', () => {
       aboutBox.fullscreen()
     }, 300)
   }
+  
+  // Close modal when clicking outside
+  setTimeout(() => {
+    const clickOutsideHandler = (e) => {
+      const winboxElement = document.querySelector('.winbox')
+      if (winboxElement && !winboxElement.contains(e.target)) {
+        aboutBox.close()
+        document.removeEventListener('click', clickOutsideHandler)
+      }
+    }
+    
+    document.addEventListener('click', clickOutsideHandler)
+  }, 100)
 })
 
 contact.addEventListener('click', () => {
@@ -51,6 +70,12 @@ contact.addEventListener('click', () => {
     },
     onblur: function () {
       this.setBackground('#777')
+    },
+    onrestore: function() {
+      if (isMobile) {
+        this.close()
+        return false
+      }
     }
   })
   
@@ -60,6 +85,19 @@ contact.addEventListener('click', () => {
       contactBox.fullscreen()
     }, 300)
   }
+  
+  // Close modal when clicking outside
+  setTimeout(() => {
+    const clickOutsideHandler = (e) => {
+      const winboxElement = document.querySelector('.winbox')
+      if (winboxElement && !winboxElement.contains(e.target)) {
+        contactBox.close()
+        document.removeEventListener('click', clickOutsideHandler)
+      }
+    }
+    
+    document.addEventListener('click', clickOutsideHandler)
+  }, 100)
 })
 
 projects.addEventListener('click', () => {
@@ -78,6 +116,12 @@ projects.addEventListener('click', () => {
     },
     onblur: function () {
       this.setBackground('#777')
+    },
+    onrestore: function() {
+      if (isMobile) {
+        this.close()
+        return false
+      }
     }
   })
   
@@ -87,6 +131,19 @@ projects.addEventListener('click', () => {
       projectsBox.fullscreen()
     }, 300)
   }
+  
+  // Close modal when clicking outside
+  setTimeout(() => {
+    const clickOutsideHandler = (e) => {
+      const winboxElement = document.querySelector('.winbox')
+      if (winboxElement && !winboxElement.contains(e.target)) {
+        projectsBox.close()
+        document.removeEventListener('click', clickOutsideHandler)
+      }
+    }
+    
+    document.addEventListener('click', clickOutsideHandler)
+  }, 100)
 })
 
 
@@ -144,7 +201,7 @@ $.fn.typewriter = function() {
             ">" != b.substring(a, a + 1);) a++
       }
       c.html(b.substring(d, a++) + (a & 1 ? "_" : ""));
-      a >= b.length || setTimeout(e, 70 + 100 *
+      a >= b.length || setTimeout(e, 30 + 40 *
         Math.random())
     };
     e()
