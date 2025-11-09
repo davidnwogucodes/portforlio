@@ -101,6 +101,14 @@ window.addEventListener('load', () => {
     // Add beeping animation (blink twice)
     doneMessage.classList.add('beeping')
     
+    // Show tip message after done message
+    setTimeout(() => {
+      const tipMessage = document.getElementById('tip-message')
+      tipMessage.style.display = 'block'
+      tipMessage.style.opacity = '0'
+      tipMessage.style.animation = 'fadeInText 0.5s ease-in-out forwards'
+    }, 800)
+    
     // After beeping animation completes (2 blinks = 1.6s), fade out loading screen
     setTimeout(() => {
       const loadingScreen = document.getElementById('loading-screen')
@@ -111,7 +119,7 @@ window.addEventListener('load', () => {
       setTimeout(() => {
         loadingScreen.classList.add('loaded')
       }, 1000)
-    }, 1800)
+    }, 2500)
   }, 5500)
 })
 
