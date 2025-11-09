@@ -351,6 +351,11 @@ nav ul li {
   display: flex !important;
 }
 
+/* Hide the maximize button (double square), keep minimize, fullscreen, and close */
+.wb-max {
+  display: none !important;
+}
+
 footer {
   display: flex;
   flex-direction: column;
