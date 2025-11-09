@@ -333,6 +333,24 @@ nav ul li {
   animation: pulse 2s ease-in-out infinite, glow 2s ease-in-out infinite;
 }
 
+/* Ensure WinBox controls are always visible */
+.wb-header {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.wb-title {
+  flex: 1 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.wb-control {
+  flex-shrink: 0 !important;
+  display: flex !important;
+}
+
 footer {
   display: flex;
   flex-direction: column;
