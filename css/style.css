@@ -191,10 +191,11 @@ nav ul li {
   animation: beepBlink 1.6s ease-in-out 1 !important;
 }
 
-.tip-text {
-  color: #ccc !important;
+.warning-text {
+  color: #ff0 !important;
   font-size: 14px;
   margin-top: 10px !important;
+  font-weight: bold;
 }
 
 @keyframes beepBlink {
