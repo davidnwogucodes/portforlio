@@ -69,6 +69,31 @@ projects.addEventListener('click', () => {
 })
 
 
+// Loading screen with beeps
+window.addEventListener('load', () => {
+  // Show done message after all loading text
+  setTimeout(() => {
+    const doneMessage = document.getElementById('done-message')
+    doneMessage.style.display = 'block'
+    doneMessage.style.opacity = '1'
+    
+    // Add beeping animation (blink twice)
+    doneMessage.classList.add('beeping')
+    
+    // After beeping animation completes (2 blinks = 1.6s), fade out loading screen
+    setTimeout(() => {
+      const loadingScreen = document.getElementById('loading-screen')
+      loadingScreen.style.transition = 'opacity 1s ease-in-out'
+      loadingScreen.style.opacity = '0'
+      
+      // Remove loading screen from DOM after fade
+      setTimeout(() => {
+        loadingScreen.classList.add('loaded')
+      }, 1000)
+    }, 1800)
+  }, 5500)
+})
+
 // Typewriter.js
 // https://github.com/ronv/Typewriter.js
 
